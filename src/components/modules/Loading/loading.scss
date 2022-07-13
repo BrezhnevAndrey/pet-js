@@ -1,0 +1,32 @@
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading-page {
+  display: inline-block;
+  animation: rotate 2s linear infinite;
+  border-radius: 50%;
+  border: 8px solid $mainBtnColor;
+  border-top-color: transparent;
+  width: 72px;
+  height: 72px;
+}
+
+.loading-btn {
+  display: inline-block;
+  animation: rotate 2s linear infinite;
+  border-radius: 50%;
+  border: 2px solid $mainBtnColor;
+  border-top-color: transparent;
+  width: 1em;
+  height: 1em;
+  align-self: center;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,111 @@
+.add-btn {
+  position: relative;
+  margin: 0 auto;
+  max-width: 216px;
+  width: 100%;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.4em;
+  color: $mainBtnColor;
+  background-color: transparent;
+  padding: 12px 26px 12px 54px;
+  border: 1px solid $mainBtnColor;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  &::before {
+    content: " ";
+    background-image: url("/images/add_client_btn.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 30%;
+    bottom: 0;
+    left: 22px;
+    right: 0;
+    width: 22px;
+  }
+  &:hover {
+    background-color: $btnHoverColor;
+    color: white;
+  }
+  &:active {
+    background-color: $btnActiveColor;
+  }
+}
+
+.add-btn:hover {
+  cursor: pointer;
+}
+
+.show-btn {
+  position: relative;
+  background-color: transparent;
+  border: unset;
+  color: inherit;
+  padding: 0;
+  line-height: 1em;
+  height: max-content;
+  &:hover {
+    cursor: pointer;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    background-color: transparent;
+    left: -17px;
+    top: -2px;
+    bottom: -2px;
+    right: -2px;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    transition: border-color 0.3s ease-in-out;
+  }
+  &:focus-visible {
+    outline: none;
+    &::after {
+      border-color: $mainBtnColor;
+    }
+  }
+}
+
+.change-btn {
+  margin-left: 15px;
+  transition: color 0.3s ease-in-out;
+  &:hover {
+    color: $mainBtnColor;
+  }
+  &::before {
+    content: " ";
+    position: absolute;
+    background-image: url("/images/change_btn.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 12px;
+    height: 12px;
+    bottom: 2px;
+    left: -13px;
+  }
+}
+
+.delete-btn {
+  margin-left: 15px;
+  transition: color 0.3s ease-in-out;
+  &:hover {
+    color: $errorTextColor;
+  }
+  &::before {
+    content: " ";
+    position: absolute;
+    background-image: url("/images/delete_btn.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 16px;
+    height: 16px;
+    bottom: -1px;
+    left: -14px;
+  }
+}
+
+.btns-container {
+  display: flex;
+  align-items: center;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <title>Client List</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__elements">
+        <a href="" class="link-logo header__elements_link-logo outline">
+          <img alt="logo" src="./images/static/logo.svg" />
+        </a>
+        <input id='search' type="text" class="search text" placeholder="Введите запрос" />
+      </div>
+    </header>
+
+    <main class="container main">
+      <section class="client" id="clientsList">
+        <h2 class="title">Клиенты</h2>
+
+        <div class="table-container">
+          <table class="table" cellpadding="20px">
+            <thead>
+              <tr>
+                <th class="table__id">
+                  <button id="id" class="sort-btn table-btn">ID<span class='sort-arrow'></button>
+                </th>
+                <th class="table__user-name text-light">
+                  <button id='fullName' class="sort-btn table-btn">
+                    Фамилия Имя Отчество<span class='sort-arrow'></span>
+                  </button>
+                </th>
+                <th class="table__data text-light">
+                  <button id="createdAt" class="sort-btn table-btn">
+                    Дата и время создания<span class='sort-arrow'></span>
+                  </button>
+                </th>
+                <th class="table__data text-light">
+                  <button id="updatedAt" class="sort-btn table-btn">
+                    Последние изменения<span class='sort-arrow'></span>
+                  </button>
+                </th>
+                <th class="table__contacts text-light">Контакты</th>
+                <th class="table__actions text-light">Действия</th>
+              </tr>
+            </thead>
+            <tbody id="table"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

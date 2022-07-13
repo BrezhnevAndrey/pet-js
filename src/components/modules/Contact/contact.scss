@@ -1,0 +1,144 @@
+.contact-container {
+  display: flex;
+  &:last-of-type {
+    margin-bottom: 20px;
+  }
+}
+
+.contact-value {
+  font-size: 14px;
+  font-weight: 600;
+  flex: 1 1 auto;
+  border: 1px solid $greyColor;
+  border-left: none;
+  border-right: none;
+  background-color: transparent;
+  padding: 8px 12px;
+  &::placeholder {
+    font-size: 14px;
+    font-weight: 400;
+    color: $lightTextColor;
+  }
+}
+
+.contact-type {
+  display: flex;
+  align-items: center;
+  position: relative;
+  border: 1px solid $greyColor;
+  padding: 10px 24px 10px 12px;
+  background-color: transparent;
+  font-size: 12px;
+  min-width: 123px;
+  height: 100%;
+  &:hover {
+    cursor: pointer;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    display: inline-block;
+    border-top: 1px solid $mainBtnColor;
+    border-left: 1px solid $mainBtnColor;
+    top: 42%;
+    right: 10%;
+    transform: rotate(225deg);
+    transition: transform .3s ease-in-out;
+  }
+  &.contact-type--active::after {
+    transform: rotate(45deg);
+  }
+}
+
+.option {
+  display: flex;
+  font-size: 12px;
+  line-height: 1.2em;
+  font-weight: 400;
+  width: 100%;
+  text-align: start;
+  padding: 5px 10px;
+  &:hover {
+    cursor: pointer;
+    background-color: $contactBackgroundColor50;
+  }
+  &:first-child {
+    padding-top: 10px;
+  }
+  &:last-of-type {
+    padding-bottom: 10px;
+  }
+}
+
+.option-container {
+  position: absolute;
+  display: none;
+  flex-direction: column;
+  align-items: start;
+  z-index: 10;
+  margin: 0px;
+  border: 1px solid $greyColor;
+  border-top: none;
+  background-color: $lightGrayColor;
+  padding: 0px;
+}
+
+.option-container--open {
+  display: flex;
+}
+
+.type-container {
+  display: inline-block;
+  background-color: $contactBackgroundColor;
+}
+
+.contact-delete-btn {
+  border: 1px solid $greyColor;
+  background-color: $contactBackgroundColor;
+  padding: 13px 8px;
+  transition: border-color 0.3s ease-in-out;
+  &:hover {
+    cursor: pointer;
+    border-color: $errorTextColor;
+    & .contact-delete-img {
+      border-color: $errorTextColor;
+      &::after,
+      &::before {
+        border-color: $errorTextColor;
+      }
+    }
+  }
+}
+
+.contact-delete-img {
+  position: relative;
+  border: 2px solid $lightTextColor;
+  border-radius: 100%;
+  width: 14px;
+  height: 14px;
+  transition: border-color 0.3s ease-in-out;
+  &::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 4px;
+    left: 1px;
+    transform: rotate(-45deg);
+    border-top: 2px solid #b0b0b0;
+    width: 8px;
+    transition: border-color 0.3s ease-in-out;
+  }
+  &::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 4px;
+    left: 1px;
+    transform: rotate(45deg);
+    border-top: 2px solid #b0b0b0;
+    width: 8px;
+    transition: border-color 0.3s ease-in-out;
+  }
+}

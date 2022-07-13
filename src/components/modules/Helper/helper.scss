@@ -1,0 +1,12 @@
+.date-container {
+  display: flex;
+  & span:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .date-container {
+    flex-wrap: wrap;
+  }
+}

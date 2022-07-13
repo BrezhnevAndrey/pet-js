@@ -1,0 +1,52 @@
+.contacts-box {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  &__contact-container {
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 15px;
+  text-align: center;
+  background-color: $contactsContainerColor;
+  margin-bottom: 12px;
+  &__contacts-box {
+    margin-bottom: 20px;
+  }
+}
+
+.add-contact-btn {
+  position: relative;
+  background-color: transparent;
+  border: none;
+  padding: 0px 0px 0px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.2rem;
+  transition: color 0.3s ease-in-out;
+  &:hover {
+    cursor: pointer;
+    color: $mainBtnColor;
+  }
+  &::before {
+    content: " ";
+    background-image: url("/images/modal-add-contact-btn.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    left: 0px;
+    bottom: 0px;
+  }
+  &--disactive {
+    display: none;
+  }
+}

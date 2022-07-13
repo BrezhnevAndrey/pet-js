@@ -1,0 +1,10 @@
+.validation-error {
+  border-bottom: 1px solid $errorTextColor;
+}
+
+.validation-obligatory {
+  &::after {
+    content: "*";
+    color: $mainBtnColor;
+  }
+}

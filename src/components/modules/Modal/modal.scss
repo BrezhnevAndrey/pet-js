@@ -1,0 +1,208 @@
+.modal-container {
+  position: relative;
+  padding: 22px 0px 27px;
+  background-color: $whiteColor;
+  min-width: 450px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.subtitle {
+  font-weight: 700;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 1.5em;
+  color: $darkGreyColor;
+  margin: 0;
+}
+
+.modal-id {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.5em;
+  color: $lightTextColor;
+}
+
+.close-btn {
+  position: relative;
+  background: unset;
+  border: none;
+  width: 20px;
+  height: 20px;
+  &:hover {
+    cursor: pointer;
+    &::after,
+    &::before {
+      background-color: $btnActiveColor;
+    }
+  }
+  &:focus,
+  &:hover {
+    outline: none;
+    &::after,
+    &::before {
+      background-color: $btnActiveColor;
+    }
+  }
+  &::after {
+    content: " ";
+    position: absolute;
+    display: inline-block;
+    left: 0;
+    width: 20px;
+    height: 1px;
+    background-color: $greyColor;
+    transform: rotate(45deg);
+    transition: background-color 0.3s ease-in-out;
+  }
+  &::before {
+    content: " ";
+    position: absolute;
+    display: inline-block;
+    left: 0;
+    width: 20px;
+    height: 1px;
+    background-color: $greyColor;
+    transform: rotate(-45deg);
+    transition: background-color 0.3s ease-in-out;
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+.modal-text {
+  font-size: 14px;
+  line-height: 1.4em;
+  font-weight: 600;
+  font-style: normal;
+  color: $darkGreyColor;
+  margin: 0;
+  &-small {
+    font-size: 12px;
+  }
+  &-regular {
+    font-weight: 400;
+  }
+  &-light {
+    color: $whiteColor;
+  }
+  &-helper {
+    color: $lightTextColor;
+  }
+}
+
+.modal-main-btn {
+  color: $whiteColor;
+  background-color: $mainBtnColor;
+  border: none;
+  padding: 12px 35px;
+  font-size: 14px;
+  line-height: 1.5em;
+  font-weight: 600;
+  font-style: normal;
+  max-width: 167px;
+  transition: background-color 0.3s ease-in-out;
+  &:hover {
+    cursor: pointer;
+    background-color: $btnHoverColor;
+  }
+  &:active {
+    background-color: $btnActiveColor;
+  }
+}
+
+.modal-button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal-secondary-btn {
+  color: $darkGreyColor;
+  background-color: transparent;
+  border: none;
+  font-size: 12px;
+  line-height: 1.5em;
+  font-weight: 400;
+  font-style: normal;
+  text-decoration: underline;
+  transition: color 0.3s ease-in-out;
+  &:hover {
+    cursor: pointer;
+    color: $btnHoverColor;
+  }
+  &.outline {
+    &::after {
+      left: 1px;
+      right: 1px;
+      top: 2px;
+      bottom: 1px;
+    }
+  }
+}
+
+.error-container {
+  text-align: center;
+  color: $errorTextColor;
+  padding: 0px 98px;
+  margin: 0px;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 1.4em;
+}
+
+.modal {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 10px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #858585e0;
+  opacity: 0;
+  transition: opacity ease-in-out 0.3s;
+  &--open {
+    opacity: 1;
+  }
+  &__subtitle > .modal-id {
+    margin-left: 10px;
+  }
+  &__close-btn {
+    position: absolute;
+    line-height: 0;
+    right: 21px;
+    top: 21px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  &__modal-text {
+    margin-bottom: 25px;
+    max-width: 275px;
+    align-self: center;
+  }
+  &__error-container {
+    margin-bottom: 13px;
+  }
+  &__subtitle {
+    margin-bottom: 14px;
+    padding: 0 30px;
+  }
+}
+
+@media (max-width: 500px) {
+  .modal-container {
+    min-width: 300px;
+  }
+
+  .modal__subtitle {
+    padding: 0 15px;
+  }
+}

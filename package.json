@@ -1,0 +1,43 @@
+{
+  "name": "js-pet",
+  "version": "1.0.0",
+  "description": "",
+  "private": "true",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development webpack --mode development",
+    "build": "cross-env NODE_ENV=production webpack --mode production",
+    "start": "cross-env NODE-ENV=development webpack-dev-server --mode development --open"
+  },
+  "author": "Brezhnev Andrey (ajladdin@gmail.com)",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.15.5",
+    "@babel/preset-env": "^7.15.6",
+    "autoprefixer": "^10.3.4",
+    "babel-loader": "^8.2.2",
+    "clean-webpack-plugin": "^4.0.0",
+    "copy-webpack-plugin": "^9.1.0",
+    "cross-env": "^7.0.3",
+    "css-loader": "^6.2.0",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.3.2",
+    "html-webpack-pug-plugin": "^3.0.0",
+    "img-loader": "^4.0.0",
+    "mini-css-extract-plugin": "^2.3.0",
+    "optimize-css-assets-webpack-plugin": "^6.0.1",
+    "postcss": "^8.3.6",
+    "postcss-loader": "^6.1.1",
+    "postcss-preset-env": "^6.7.0",
+    "sass": "^1.41.0",
+    "sass-loader": "^12.1.0",
+    "sass-resources-loader": "^2.2.4",
+    "style-loader": "^3.2.1",
+    "terser-webpack-plugin": "^5.2.4",
+    "webpack": "^5.53.0",
+    "webpack-cli": "^4.8.0",
+    "webpack-dev-server": "^4.2.1"
+  },
+  "dependencies": {
+    "normalize.css": "^8.0.1"
+  }
+}

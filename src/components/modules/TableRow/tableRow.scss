@@ -1,0 +1,15 @@
+.row-btns-container {
+  display: flex;
+  justify-content: space-between;
+  height: inherit;
+}
+
+.row-tooltip-wrapper {
+  line-height: 0;
+}
+
+@media (max-width: 1000px) {
+  .row-btns-container {
+    flex-wrap: wrap;
+  }
+}
